@@ -25,7 +25,7 @@ const members: Member[] = [
     role: "Interfaz & Código UI",
     emoji: "🎨",
     description:
-      "Construyó toda la interfaz en React + Tailwind: hero con globo terráqueo, navegación, tarjetas glass, animaciones con Framer Motion y el sistema de diseño responsive que une todas las pantallas.",
+      "Construyó toda la interfaz en React + Tailwind: hero con globo terráqueo, navegación, tarjetas glass, animaciones con Framer Motion y el sistema de diseño responsive que une todas las pantallas. Encargado del servidor de la web y la integración con el backend para mostrar los datos en tiempo real.",
   },
   {
     name: "SL",
@@ -87,7 +87,7 @@ const Credits = () => {
           className="mt-5 max-w-2xl text-center text-white/70"
         >
           Un proyecto de monitorización ambiental en Pinar de Chamartín.
-          Datos abiertos, sensores y mapas para entender mejor nuestro entorno. Se usó la ayuda de IA para depurar código y optimizar el uso en dispositivos móviles.
+          Datos abiertos, sensores y mapas para entender mejor nuestro entorno. Se usó la ayuda de IA para depurar código y optimizar el uso en dispositivos móviles. 
         </motion.p>
 
         {/* Team grid */}
