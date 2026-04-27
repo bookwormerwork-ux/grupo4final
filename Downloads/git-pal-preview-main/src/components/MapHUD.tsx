@@ -98,8 +98,8 @@ const MapHUD = () => {
                       label="Parques (3)"
                     />
                     <LegendRow
-                      color={LOCATIONS[3].color}
-                      borderColor={LOCATIONS[3].borderColor}
+                      color={LOCATIONS[4].color}
+                      borderColor={LOCATIONS[4].borderColor}
                       label="Colegio Madrid"
                     />
                   </div>
