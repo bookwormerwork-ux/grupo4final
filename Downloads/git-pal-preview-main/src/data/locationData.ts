@@ -67,7 +67,7 @@ export interface LocationDetailData {
 export const parqueFernandezCatalinaData: LocationDetailData = {
   summary: "Espacio verde dedicado a la salud ambiental y el bienestar comunitario.",
   stats: {
-    surface:        { key: "surface",        label: "Superficie",         value: "—", unit: "m²" },
+    surface:        { key: "surface",        label: "Superficie",         value: "4800", unit: "m²" },
     temperature:    { key: "temperature",    label: "Temperatura media",  value: "—", unit: "°C" },
     humidity:       { key: "humidity",       label: "Humedad",            value: "—", unit: "%"  },
     airQuality:     { key: "airQuality",     label: "Calidad del aire",   value: "—", unit: "ICA"},
@@ -240,11 +240,11 @@ export const parquePinarDelReyData: LocationDetailData = {
 export const colegioMadridFsmData: LocationDetailData = {
   summary: "—",
   stats: {
-    surface:        { key: "surface",        label: "Superficie del recinto", value: "—", unit: "m²" },
-    temperature:    { key: "temperature",    label: "Temperatura media aula", value: "—", unit: "°C" },
-    humidity:       { key: "humidity",       label: "Humedad interior",       value: "—", unit: "%"  },
-    airQuality:     { key: "airQuality",     label: "CO₂ medio en aula",      value: "—", unit: "ppm"},
-    solarRadiation: { key: "solarRadiation", label: "Radiación en patio",     value: "—", unit: "W/m²"},
+    surface:        { key: "surface",        label: "Superficie del recinto", value: "12400", unit: "m²" },
+    temperature:    { key: "temperature",    label: "Temperatura exterior",   value: "—", unit: "°C" },
+    humidity:       { key: "humidity",       label: "Humedad exterior",       value: "—", unit: "%"  },
+    airQuality:     { key: "airQuality",     label: "Calidad del aire",       value: "—", unit: "ICA"},
+    solarRadiation: { key: "solarRadiation", label: "Radiación solar",        value: "—", unit: "W/m²"},
     precipitation:  { key: "precipitation",  label: "Precipitaciones",        value: "—", unit: "mm" },
   },
   notes: "—",
