@@ -12,6 +12,7 @@ import { ArrowLeft, Leaf, Thermometer, Droplets, Wind, Sun, CloudRain } from "lu
 import { getLocationById } from "@/data/locations";
 import { getLocationData, LocationStat } from "@/data/locationData";
 import { buttonPressVariants, buttonPressTransition, staggerContainerVariants, staggerItemVariants, staggerItemTransition } from "@/lib/animations";
+import { WellBeingTable } from "@/components/WellBeingTable";
 import {
   TemperatureAreaChart,
   AirQualityBarChart,
@@ -161,6 +162,27 @@ const Detail = () => {
             />
           </div>
         </motion.section>
+
+        {/* Well-being Impact Section */}
+        {data?.wellbeing && (
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="mt-10"
+          >
+            <WellBeingTable
+              title={data.wellbeing.title}
+              overallScore={data.wellbeing.overallScore}
+              metrics={data.wellbeing.metrics}
+              respondents={data.wellbeing.respondents}
+              distance={data.wellbeing.distance}
+              duration={data.wellbeing.duration}
+              color={location.color}
+              borderColor={location.borderColor}
+            />
+          </motion.section>
+        )}
       </main>
 
       <footer className="border-t border-black/5 bg-white py-8">

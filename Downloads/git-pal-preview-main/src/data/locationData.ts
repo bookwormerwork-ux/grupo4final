@@ -19,6 +19,12 @@ export interface LocationStat {
   unit?: string;
 }
 
+export interface WellBeingMetric {
+  question: string;
+  average: number;
+  respondents: number;
+}
+
 export interface LocationDetailData {
   summary: string;
   stats: {
@@ -30,11 +36,19 @@ export interface LocationDetailData {
     precipitation: LocationStat;
   };
   notes: string;
+  wellbeing?: {
+    title: string;
+    overallScore: number;
+    metrics: WellBeingMetric[];
+    respondents: number;
+    distance?: string;
+    duration?: string;
+  };
 }
 
 // ---------- Parque Doctor Fernández Catalina ----------
 export const parqueFernandezCatalinaData: LocationDetailData = {
-  summary: "—",
+  summary: "Espacio verde dedicado a la salud ambiental y el bienestar comunitario.",
   stats: {
     surface:        { key: "surface",        label: "Superficie",         value: "—", unit: "m²" },
     temperature:    { key: "temperature",    label: "Temperatura media",  value: "—", unit: "°C" },
@@ -43,7 +57,21 @@ export const parqueFernandezCatalinaData: LocationDetailData = {
     solarRadiation: { key: "solarRadiation", label: "Radiación solar",    value: "—", unit: "W/m²"},
     precipitation:  { key: "precipitation",  label: "Precipitaciones",    value: "—", unit: "mm" },
   },
-  notes: "—",
+  notes: "Sensores en tiempo real — Última actualización: Hoy",
+  wellbeing: {
+    title: "Impacto en Bienestar",
+    overallScore: 77.91,
+    respondents: 23,
+    distance: "1.6 km",
+    duration: "0.5-1 h",
+    metrics: [
+      { question: "Me he sentido alegre y de buen humor", average: 80.87, respondents: 23 },
+      { question: "Me he sentido tranquilo y relajado", average: 73.91, respondents: 23 },
+      { question: "Me he sentido activo y energético", average: 74.78, respondents: 23 },
+      { question: "Me he despertado fresco y descansado", average: 78.26, respondents: 23 },
+      { question: "Mi vida cotidiana ha estado llena de cosas que me interesan", average: 81.74, respondents: 23 },
+    ],
+  },
 };
 
 // ---------- Parque Manoteras ----------
