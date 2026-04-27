@@ -126,7 +126,11 @@ const HighlightCircles = ({ onHover }: { onHover: MapInnerProps["onHover"] }) =>
               });
             },
             click: () => {
-              window.open(`/detail/${loc.id}`, "_blank", "noopener,noreferrer");
+              if (loc.id === "colegio-madrid-fsm") {
+                window.open("https://cm-fsm.es", "_blank", "noopener,noreferrer");
+              } else {
+                window.open(`/detail/${loc.id}`, "_blank", "noopener,noreferrer");
+              }
             },
           }}
         />
