@@ -68,10 +68,10 @@ export const SurveyDataTable = ({
       initial={{ opacity: 0, y: 24 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.65, ease: EASING.smooth }}
-      className="relative rounded-2xl overflow-hidden backdrop-blur-xl border border-white/20"
+      className="relative rounded-2xl overflow-hidden backdrop-blur-xl border border-white/10"
       style={{
-        background: `linear-gradient(135deg, ${color}18 0%, ${color}08 100%)`,
-        boxShadow: `0 8px 32px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.18)`,
+        background: `linear-gradient(135deg, #0f172a 0%, #1e293b 60%, ${color}28 100%)`,
+        boxShadow: `0 20px 60px rgba(0,0,0,0.22), 0 4px 16px rgba(0,0,0,0.14), inset 0 1px 0 rgba(255,255,255,0.07)`,
       }}
     >
       {/* Ambient glow */}
