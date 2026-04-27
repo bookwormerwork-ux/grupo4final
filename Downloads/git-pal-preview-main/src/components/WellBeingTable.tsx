@@ -114,5 +114,3 @@ export const WellBeingTable = ({
     </motion.div>
   );
 };
-
-export { WellBeingTable };
