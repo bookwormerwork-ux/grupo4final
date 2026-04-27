@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import Detail from "./pages/Detail.tsx";
+import Wellbeing from "./pages/Wellbeing.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import PageTransition from "@/components/PageTransition.tsx";
 
@@ -30,6 +31,14 @@ const AppRoutes = () => {
           element={
             <PageTransition>
               <Detail />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/detail/:locationId/wellbeing"
+          element={
+            <PageTransition>
+              <Wellbeing />
             </PageTransition>
           }
         />

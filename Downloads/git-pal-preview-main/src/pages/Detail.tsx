@@ -12,8 +12,6 @@ import { ArrowLeft, Leaf, Thermometer, Droplets, Wind, Sun, CloudRain, RefreshCw
 import { getLocationById } from "@/data/locations";
 import { getLocationData } from "@/data/locationData";
 import { buttonPressVariants, buttonPressTransition, staggerContainerVariants, staggerItemVariants, staggerItemTransition } from "@/lib/animations";
-import { WellBeingTable } from "@/components/WellBeingTable";
-import { SurveyDataTable } from "@/components/SurveyDataTable";
 import { useLocationWeather } from "@/hooks/useLocationWeather";
 import AmbientPlayer from "@/components/AmbientPlayer";
 import {
@@ -131,6 +129,24 @@ const Detail = () => {
           <p className="mt-2 text-sm text-neutral-500">
             Coordenadas: {location.center[0].toFixed(4)}° N, {Math.abs(location.center[1]).toFixed(4)}° W
           </p>
+          {data?.wellbeing && (
+            <motion.button
+              onClick={() => navigate(`/detail/${locationId}/wellbeing`)}
+              initial="initial"
+              whileHover="hover"
+              whileTap="tap"
+              variants={buttonPressVariants}
+              transition={buttonPressTransition}
+              className="mt-3 inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-[12px] font-semibold transition-all"
+              style={{
+                background: `${location.color}18`,
+                color: location.borderColor,
+                border: `1px solid ${location.color}40`,
+              }}
+            >
+              Ver impacto en bienestar →
+            </motion.button>
+          )}
           <div
             className="mt-5 h-1 w-24 rounded-full"
             style={{ background: location.borderColor }}
@@ -246,34 +262,6 @@ const Detail = () => {
           </div>
         </motion.section>
 
-        {/* Well-being Impact Section */}
-        {data?.wellbeing && (
-          <motion.section
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="mt-10 space-y-5"
-          >
-            <WellBeingTable
-              title={data.wellbeing.title}
-              overallScore={data.wellbeing.overallScore}
-              metrics={data.wellbeing.metrics}
-              respondents={data.wellbeing.respondents}
-              distance={data.wellbeing.distance}
-              duration={data.wellbeing.duration}
-              color={location.color}
-              borderColor={location.borderColor}
-            />
-            {data.wellbeing.respondentRows && (
-              <SurveyDataTable
-                respondentRows={data.wellbeing.respondentRows}
-                demographicBreakdowns={data.wellbeing.demographicBreakdowns}
-                color={location.color}
-                borderColor={location.borderColor}
-              />
-            )}
-          </motion.section>
-        )}
       </main>
 
       <footer className="border-t border-black/5 bg-white py-8">

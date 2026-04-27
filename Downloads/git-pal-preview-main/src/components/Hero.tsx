@@ -20,10 +20,18 @@ const HERO_TITLE = "Grupo 4 — Digitalizando el Medio Ambiente";
 const HERO_SUBTITLE = "Pinar de Chamartín, Madrid";
 // ============================================================
 
+function getShortcutKind(): "mac" | "windows" | "mobile" {
+  if (typeof navigator === "undefined") return "mac";
+  if (navigator.maxTouchPoints > 1 && !window.matchMedia("(pointer: fine)").matches) return "mobile";
+  if (/Mac|iPhone|iPad|iPod/.test(navigator.platform || navigator.userAgent)) return "mac";
+  return "windows";
+}
+
 const Hero = ({ scrollY }: HeroProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
   const reduceMotion = useReducedMotion();
+  const shortcutKind = getShortcutKind();
 
   // Smoothly map scroll into transforms — tuned for a more cinematic feel
   const titleY = useTransform(scrollY, [0, 700], [0, -120]);
@@ -221,7 +229,7 @@ const Hero = ({ scrollY }: HeroProps) => {
           {HERO_SUBTITLE}
         </motion.p>
 
-        {/* ⌘K hint */}
+        {/* Shortcut hint — adapts to device */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
@@ -231,14 +239,19 @@ const Hero = ({ scrollY }: HeroProps) => {
           }}
           className="mt-10 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-[11px] uppercase tracking-[0.18em] text-white/60 backdrop-blur"
         >
-          <span>Pulsa</span>
-          <kbd className="rounded bg-white/15 px-1.5 py-0.5 font-mono text-[10px] text-white/90">
-            ⌘
-          </kbd>
-          <kbd className="rounded bg-white/15 px-1.5 py-0.5 font-mono text-[10px] text-white/90">
-            K
-          </kbd>
-          <span>para buscar</span>
+          {shortcutKind === "mobile" ? (
+            <span>Toca para buscar</span>
+          ) : (
+            <>
+              <span>Pulsa</span>
+              {shortcutKind === "mac" ? (
+                <kbd className="rounded bg-white/15 px-1.5 py-0.5 font-mono text-[10px] text-white/90">⌘K</kbd>
+              ) : (
+                <kbd className="rounded bg-white/15 px-1.5 py-0.5 font-mono text-[10px] text-white/90">Ctrl K</kbd>
+              )}
+              <span>para buscar</span>
+            </>
+          )}
         </motion.div>
       </motion.div>
 
