@@ -74,6 +74,20 @@ export const parqueFuenteHortalezaData: LocationDetailData = {
   notes: "—",
 };
 
+// ---------- Parque Pinar del Rey ----------
+export const parquePinarDelReyData: LocationDetailData = {
+  summary: "—",
+  stats: {
+    surface:        { key: "surface",        label: "Superficie",         value: "—", unit: "m²" },
+    temperature:    { key: "temperature",    label: "Temperatura media",  value: "—", unit: "°C" },
+    humidity:       { key: "humidity",       label: "Humedad",            value: "—", unit: "%"  },
+    airQuality:     { key: "airQuality",     label: "Calidad del aire",   value: "—", unit: "ICA"},
+    solarRadiation: { key: "solarRadiation", label: "Radiación solar",    value: "—", unit: "W/m²"},
+    precipitation:  { key: "precipitation",  label: "Precipitaciones",    value: "—", unit: "mm" },
+  },
+  notes: "—",
+};
+
 // ---------- Colegio Madrid - FSM (Fundación Santa María) ----------
 export const colegioMadridFsmData: LocationDetailData = {
   summary: "—",
@@ -93,6 +107,7 @@ export const LOCATION_DATA: Record<string, LocationDetailData> = {
   "parque-fernandez-catalina": parqueFernandezCatalinaData,
   "parque-manoteras":          parqueManoterasData,
   "parque-fuente-hortaleza":   parqueFuenteHortalezaData,
+  "parque-pinar-del-rey":      parquePinarDelReyData,
   "colegio-madrid-fsm":        colegioMadridFsmData,
 };
 

@@ -56,6 +56,16 @@ export const LOCATIONS: Location[] = [
     type: "park",
   },
   {
+    id: "parque-pinar-del-rey",
+    name: "Parque Pinar del Rey",
+    center: [40.464632510471056, -3.6556009029796392],
+    radius: 140,
+    color: "#34d399",
+    borderColor: "#10b981",
+    fillOpacity: 0.25,
+    type: "park",
+  },
+  {
     id: "colegio-madrid-fsm",
     name: "Colegio Madrid - FSM",
     center: [40.47374681146278, -3.6656464953234646],
