@@ -15,6 +15,7 @@ import { buttonPressVariants, buttonPressTransition, staggerContainerVariants, s
 import { WellBeingTable } from "@/components/WellBeingTable";
 import { SurveyDataTable } from "@/components/SurveyDataTable";
 import { useLocationWeather } from "@/hooks/useLocationWeather";
+import AmbientPlayer from "@/components/AmbientPlayer";
 import {
   TemperatureAreaChart,
   AirQualityBarChart,
@@ -280,6 +281,12 @@ const Detail = () => {
           Grupo 4 · Digitalizando el Medio Ambiente · Madrid, España
         </div>
       </footer>
+
+      <AmbientPlayer
+        weather={weather}
+        color={location.color}
+        borderColor={location.borderColor}
+      />
     </div>
   );
 };
