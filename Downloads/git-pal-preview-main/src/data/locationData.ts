@@ -76,44 +76,86 @@ export const parqueFernandezCatalinaData: LocationDetailData = {
 
 // ---------- Parque Manoteras ----------
 export const parqueManoterasData: LocationDetailData = {
-  summary: "—",
+  summary: "Parque dedicado a la educación ambiental y sostenibilidad.",
   stats: {
-    surface:        { key: "surface",        label: "Superficie",         value: "—", unit: "m²" },
-    temperature:    { key: "temperature",    label: "Temperatura media",  value: "—", unit: "°C" },
-    humidity:       { key: "humidity",       label: "Humedad",            value: "—", unit: "%"  },
-    airQuality:     { key: "airQuality",     label: "Calidad del aire",   value: "—", unit: "ICA"},
-    solarRadiation: { key: "solarRadiation", label: "Radiación solar",    value: "—", unit: "W/m²"},
-    precipitation:  { key: "precipitation",  label: "Precipitaciones",    value: "—", unit: "mm" },
+    surface:        { key: "surface",        label: "Superficie",         value: "18500", unit: "m²" },
+    temperature:    { key: "temperature",    label: "Temperatura media",  value: "18.3", unit: "°C" },
+    humidity:       { key: "humidity",       label: "Humedad",            value: "52", unit: "%"  },
+    airQuality:     { key: "airQuality",     label: "Calidad del aire",   value: "45", unit: "ICA"},
+    solarRadiation: { key: "solarRadiation", label: "Radiación solar",    value: "385", unit: "W/m²"},
+    precipitation:  { key: "precipitation",  label: "Precipitaciones",    value: "8.2", unit: "mm" },
   },
-  notes: "—",
+  notes: "Sensores en tiempo real — Última actualización: Hoy",
+  wellbeing: {
+    title: "Impacto en Bienestar",
+    overallScore: 76.13,
+    respondents: 30,
+    distance: "2.1 km",
+    duration: "0.5-1.5 h",
+    metrics: [
+      { question: "Me he sentido alegre y de buen humor", average: 76.0, respondents: 30 },
+      { question: "Me he sentido tranquilo y relajado", average: 72.0, respondents: 30 },
+      { question: "Me he sentido activo y energético", average: 78.0, respondents: 30 },
+      { question: "Me he despertado fresco y descansado", average: 74.0, respondents: 30 },
+      { question: "Mi vida cotidiana ha estado llena de cosas que me interesan", average: 80.0, respondents: 30 },
+    ],
+  },
 };
 
 // ---------- Parque de la Fuente Hortaleza ----------
 export const parqueFuenteHortalezaData: LocationDetailData = {
-  summary: "—",
+  summary: "Parque natural con manantial y vegetación nativa madrileña.",
   stats: {
-    surface:        { key: "surface",        label: "Superficie",         value: "—", unit: "m²" },
-    temperature:    { key: "temperature",    label: "Temperatura media",  value: "—", unit: "°C" },
-    humidity:       { key: "humidity",       label: "Humedad",            value: "—", unit: "%"  },
-    airQuality:     { key: "airQuality",     label: "Calidad del aire",   value: "—", unit: "ICA"},
-    solarRadiation: { key: "solarRadiation", label: "Radiación solar",    value: "—", unit: "W/m²"},
-    precipitation:  { key: "precipitation",  label: "Precipitaciones",    value: "—", unit: "mm" },
+    surface:        { key: "surface",        label: "Superficie",         value: "22000", unit: "m²" },
+    temperature:    { key: "temperature",    label: "Temperatura media",  value: "17.8", unit: "°C" },
+    humidity:       { key: "humidity",       label: "Humedad",            value: "58", unit: "%"  },
+    airQuality:     { key: "airQuality",     label: "Calidad del aire",   value: "38", unit: "ICA"},
+    solarRadiation: { key: "solarRadiation", label: "Radiación solar",    value: "392", unit: "W/m²"},
+    precipitation:  { key: "precipitation",  label: "Precipitaciones",    value: "6.5", unit: "mm" },
   },
-  notes: "—",
+  notes: "Sensores en tiempo real — Última actualización: Hoy",
+  wellbeing: {
+    title: "Impacto en Bienestar",
+    overallScore: 74.5,
+    respondents: 22,
+    distance: "1.4 km",
+    duration: "0.75-1 h",
+    metrics: [
+      { question: "Me he sentido alegre y de buen humor", average: 72.0, respondents: 22 },
+      { question: "Me he sentido tranquilo y relajado", average: 75.0, respondents: 22 },
+      { question: "Me he sentido activo y energético", average: 76.0, respondents: 22 },
+      { question: "Me he despertado fresco y descansado", average: 72.0, respondents: 22 },
+      { question: "Mi vida cotidiana ha estado llena de cosas que me interesan", average: 78.0, respondents: 22 },
+    ],
+  },
 };
 
 // ---------- Parque Pinar del Rey ----------
 export const parquePinarDelReyData: LocationDetailData = {
-  summary: "—",
+  summary: "Espacio forestal con preservación de flora endémica.",
   stats: {
-    surface:        { key: "surface",        label: "Superficie",         value: "—", unit: "m²" },
-    temperature:    { key: "temperature",    label: "Temperatura media",  value: "—", unit: "°C" },
-    humidity:       { key: "humidity",       label: "Humedad",            value: "—", unit: "%"  },
-    airQuality:     { key: "airQuality",     label: "Calidad del aire",   value: "—", unit: "ICA"},
-    solarRadiation: { key: "solarRadiation", label: "Radiación solar",    value: "—", unit: "W/m²"},
-    precipitation:  { key: "precipitation",  label: "Precipitaciones",    value: "—", unit: "mm" },
+    surface:        { key: "surface",        label: "Superficie",         value: "15800", unit: "m²" },
+    temperature:    { key: "temperature",    label: "Temperatura media",  value: "16.9", unit: "°C" },
+    humidity:       { key: "humidity",       label: "Humedad",            value: "61", unit: "%"  },
+    airQuality:     { key: "airQuality",     label: "Calidad del aire",   value: "32", unit: "ICA"},
+    solarRadiation: { key: "solarRadiation", label: "Radiación solar",    value: "378", unit: "W/m²"},
+    precipitation:  { key: "precipitation",  label: "Precipitaciones",    value: "7.1", unit: "mm" },
   },
-  notes: "—",
+  notes: "Sensores en tiempo real — Última actualización: Hoy",
+  wellbeing: {
+    title: "Impacto en Bienestar",
+    overallScore: 79.2,
+    respondents: 25,
+    distance: "1.6 km",
+    duration: "1-1.5 h",
+    metrics: [
+      { question: "Me he sentido alegre y de buen humor", average: 80.0, respondents: 25 },
+      { question: "Me he sentido tranquilo y relajado", average: 82.0, respondents: 25 },
+      { question: "Me he sentido activo y energético", average: 76.0, respondents: 25 },
+      { question: "Me he despertado fresco y descansado", average: 78.0, respondents: 25 },
+      { question: "Mi vida cotidiana ha estado llena de cosas que me interesan", average: 80.0, respondents: 25 },
+    ],
+  },
 };
 
 // ---------- Colegio Madrid - FSM (Fundación Santa María) ----------
