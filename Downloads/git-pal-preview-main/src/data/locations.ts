@@ -46,16 +46,6 @@ export const LOCATIONS: Location[] = [
     type: "park",
   },
   {
-    id: "parque-fuente-hortaleza",
-    name: "Parque de la Fuente Hortaleza",
-    center: [40.47652437184086, -3.655776746109947],
-    radius: 140,
-    color: "#34d399",
-    borderColor: "#10b981",
-    fillOpacity: 0.25,
-    type: "park",
-  },
-  {
     id: "parque-pinar-del-rey",
     name: "Parque Pinar del Rey",
     center: [40.464632510471056, -3.6556009029796392],
