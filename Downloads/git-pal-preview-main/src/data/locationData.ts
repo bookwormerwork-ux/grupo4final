@@ -149,6 +149,34 @@ export const parqueManoterasData: LocationDetailData = {
   },
 };
 
+// ---------- Parque de la Fuente Hortaleza ----------
+export const parqueFuenteHortalezaData: LocationDetailData = {
+  summary: "Parque natural con manantial y vegetación nativa madrileña.",
+  stats: {
+    surface:        { key: "surface",        label: "Superficie",         value: "22000", unit: "m²" },
+    temperature:    { key: "temperature",    label: "Temperatura media",  value: "17.8", unit: "°C" },
+    humidity:       { key: "humidity",       label: "Humedad",            value: "58", unit: "%"  },
+    airQuality:     { key: "airQuality",     label: "Calidad del aire",   value: "38", unit: "ICA"},
+    solarRadiation: { key: "solarRadiation", label: "Radiación solar",    value: "392", unit: "W/m²"},
+    precipitation:  { key: "precipitation",  label: "Precipitaciones",    value: "6.5", unit: "mm" },
+  },
+  notes: "Sensores en tiempo real — Última actualización: Hoy",
+  wellbeing: {
+    title: "Impacto en Bienestar",
+    overallScore: 74.5,
+    respondents: 22,
+    distance: "1.4 km",
+    duration: "0.75-1 h",
+    metrics: [
+      { question: "Me he sentido alegre y de buen humor",                                        average: 72.0, respondents: 22 },
+      { question: "Me he sentido tranquilo y relajado",                                          average: 75.0, respondents: 22 },
+      { question: "Me he sentido activo y energético",                                           average: 76.0, respondents: 22 },
+      { question: "Me he despertado fresco y descansado",                                        average: 72.0, respondents: 22 },
+      { question: "Mi vida cotidiana ha estado llena de cosas que me interesan",                 average: 78.0, respondents: 22 },
+    ],
+  },
+};
+
 // ---------- Parque Pinar del Rey ----------
 // Source: survey data — 23 respondents (with gender/age), WHO-5 scale (1-5), overall 77.91%
 export const parquePinarDelReyData: LocationDetailData = {
@@ -226,6 +254,7 @@ export const colegioMadridFsmData: LocationDetailData = {
 export const LOCATION_DATA: Record<string, LocationDetailData> = {
   "parque-fernandez-catalina": parqueFernandezCatalinaData,
   "parque-manoteras":          parqueManoterasData,
+  "parque-fuente-hortaleza":   parqueFuenteHortalezaData,
   "parque-pinar-del-rey":      parquePinarDelReyData,
   "colegio-madrid-fsm":        colegioMadridFsmData,
 };
