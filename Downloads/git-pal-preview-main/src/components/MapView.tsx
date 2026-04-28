@@ -86,7 +86,10 @@ const HighlightCircles = ({ onHover }: { onHover: MapInnerProps["onHover"] }) =>
 
   return (
     <>
-      {LOCATIONS.map((loc) => (
+      {LOCATIONS.map((loc) => {
+        const isHidden = loc.id === "parque-fuente-hortaleza";
+        
+        return (
         <Circle
           key={loc.id}
           center={loc.center}
@@ -95,10 +98,11 @@ const HighlightCircles = ({ onHover }: { onHover: MapInnerProps["onHover"] }) =>
             color: loc.borderColor,
             weight: 2,
             fillColor: loc.color,
-            fillOpacity: loc.fillOpacity,
+            fillOpacity: isHidden ? 0 : loc.fillOpacity,
+            pointerEvents: isHidden ? "none" : "auto",
             className: "pulse-highlight",
           }}
-          eventHandlers={{
+          eventHandlers={isHidden ? {} : {
             mouseover: (e) => {
               const point = map.latLngToContainerPoint(e.latlng);
               const container = map.getContainer().getBoundingClientRect();
@@ -134,7 +138,8 @@ const HighlightCircles = ({ onHover }: { onHover: MapInnerProps["onHover"] }) =>
             },
           }}
         />
-      ))}
+      );
+      })}
     </>
   );
 };

@@ -140,7 +140,9 @@ const Hero = ({ scrollY }: HeroProps) => {
           playsInline
           autoPlay
           preload="auto"
+          controls={false}
           className="h-full w-full object-cover scale-110"
+          style={{ pointerEvents: "none" }}
         />
         <div className="absolute inset-0 bg-gradient-to-br from-[#0b1d3a] via-[#0a0a0a] to-[#072116] -z-10" />
       </motion.div>
