@@ -142,6 +142,13 @@
   mix-blend-mode: overlay;
 }
 
+/* Hide iOS/Android native video controls overlay completely */
+video::-webkit-media-controls,
+video::-webkit-media-controls-overlay-play-button,
+video::-webkit-media-controls-panel {
+  display: none !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .film-grain { display: none; }
   .scroll-arrow { animation: none; }

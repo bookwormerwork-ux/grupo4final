@@ -11,6 +11,7 @@ import { ChevronDown } from "lucide-react";
 
 interface HeroProps {
   scrollY: MotionValue<number>;
+  onOpenPalette?: () => void;
 }
 
 // ============================================================
@@ -27,7 +28,7 @@ function getShortcutKind(): "mac" | "windows" | "mobile" {
   return "windows";
 }
 
-const Hero = ({ scrollY }: HeroProps) => {
+const Hero = ({ scrollY, onOpenPalette }: HeroProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
   const reduceMotion = useReducedMotion();
